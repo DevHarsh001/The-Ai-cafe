@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    cursor: url('images/custom-cursor.png'), auto;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+header {
+    background-color: #6a0dad;
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1em;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.theme-switcher {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.theme-switcher input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #6a0dad;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+main {
+    padding: 2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.search-bar {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.search-bar input {
+    padding: 0.5em;
+    width: 80%;
+    max-width: 400px;
+    border: 2px solid #6a0dad;
+    border-radius: 5px;
+}
+
+.articles article {
+    background-color: #ffffff;
+    padding: 1em;
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark .articles article {
+    background-color: #444;
+    color: #f4f4f4;
+}
+
+.articles article h2 {
+    margin-top: 0;
+    color: inherit;
+}
+
+.articles article p {
+    margin: 0.5em 0;
+}
+
+.author {
+    font-size: 0.9em;
+    color: inherit;
+}
+
+body.dark .author {
+    color: #aaa;
+}
+a {
+    color: inherit;      /* Inherits color from the parent element */
+    text-decoration: none; /* Removes underline */
+}
+pre {
+    font-family: Arial, sans-serif;
+}
+.Article1 {
+    font-weight: 200;
+    font-size: 20px;
+    text-align: center;
+}
