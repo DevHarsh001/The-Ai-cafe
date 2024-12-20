@@ -155,3 +155,28 @@ pre {
     font-size: 20px;
     text-align: center;
 }
+/* Default settings for large devices (tablets, desktops) */
+.YT1 {
+    position: relative;
+    width: 100%; /* Make it responsive */
+    height: 0;
+    padding-top: 56.25%; /* Maintain 16:9 aspect ratio */
+    overflow: hidden;
+    background-color: #000; /* Black background for better visibility */
+}
+
+.YT1 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Full height and width */
+}
+
+/* Adjustments for very small screens (max-width: 400px) */
+@media (max-width: 400px) {
+    .YT1 {
+        width: 100%; /* Full width on small screens */
+        padding-top: 56.25%; /* Maintain aspect ratio */
+    }
+}
