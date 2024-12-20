@@ -3,12 +3,11 @@ html {
     height: auto;
     width: auto;
   }
-body {
+.body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    cursor: url('images/custom-cursor.png'), auto;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -62,7 +61,7 @@ nav ul li a {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: #cccccc;
     transition: .4s;
     border-radius: 34px;
 }
@@ -74,13 +73,13 @@ nav ul li a {
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: white;
+    background-color: #ffffff;
     transition: .4s;
     border-radius: 50%;
 }
 
 input:checked + .slider {
-    background-color: #6a0dad;
+    background-color: #550a8b;
 }
 
 input:checked + .slider:before {
@@ -119,6 +118,18 @@ main {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, color 0.3s;
+    
+}
+.articles:hover article {
+    transform: scale(1.01);
+    background-color: #ffffff;
+    padding: 1em;
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+    
 }
 
 body.dark .articles article {
@@ -144,39 +155,12 @@ body.dark .author {
     color: #aaa;
 }
 a {
-    color: inherit;      /* Inherits color from the parent element */
-    text-decoration: none; /* Removes underline */
+    color: inherit;
+    text-decoration: none;
+    
 }
-pre {
-    font-family: Arial, sans-serif;
-}
-.Article1 {
-    font-weight: 200;
-    font-size: 20px;
+
+#content {
     text-align: center;
 }
-/* Default settings for large devices (tablets, desktops) */
-.YT1 {
-    position: relative;
-    width: 100%; /* Make it responsive */
-    height: 0;
-    padding-top: 56.25%; /* Maintain 16:9 aspect ratio */
-    overflow: hidden;
-    background-color: #000; /* Black background for better visibility */
-}
 
-.YT1 iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; /* Full height and width */
-}
-
-/* Adjustments for very small screens (max-width: 400px) */
-@media (max-width: 400px) {
-    .YT1 {
-        width: 100%; /* Full width on small screens */
-        padding-top: 56.25%; /* Maintain aspect ratio */
-    }
-}
